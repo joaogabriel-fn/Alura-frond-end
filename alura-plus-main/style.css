@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --main-color: #FFFFFF;
+    --secundary-color: #C0C0C0;
+    --button-color: #167BF7;
+    --hover-color: #6caeff;
+    --backgroud-color: #00030C;
+    --hover-backgroud-color: #060d22;
+    --font-family-main: 'Inter';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: var(--backgroud-color);
+    color: var(--main-color);
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main {
+    background-image: url("./assets/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__box {
+    margin: 0 6em;
+}
+
+.container__title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__button {
+    color: var(--main-color);
+    background-color: var(--button-color);
+    border-radius: 8px;
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    margin-bottom: 1em;
+    transition: 0.3s;
+    filter: opacity(75%);
+}
+
+.container__button:hover {
+    filter: opacity(100%);
+}
+
+.button__secundary {
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+}
+
+.container__main__image {
+    margin: 1em 0 2em 0;
+}
+
+.container__disclaimer {
+    font-size: 12px;
+    color: var(--secundary-color);
+}
+
+.secundary {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.secundary__container__image {
+    width: 80%;
+}
+
+.description__title {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--main-color);
+    margin-bottom: 0.1em;
+}
+
+.description__text {
+    color: var(--secundary-color);
+    margin: 1em 0;
+}
+
+.third__container__button{
+    display: inline-block;
+/*  Poderia utilizar width: fit-content; */
+}
+
+.bottom__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottom__container__title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.bottom__container__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image-subtitle__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: var(--font-family-main);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+footer {
+    width: 100%;
+    padding: 8px;
+
+    
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}

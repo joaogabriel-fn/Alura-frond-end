@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMMET</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    main.container>h1{Titulo da Pagina}+article.cartao>h2.cartao__titulo{titulo}+h3.cartao__subtitulo{subtitulo}+p{um texto qualquer}
+    <main class="container">
+        <h1>Titulo da Pagina</h1>
+        <article class="cartao">
+            <h2 class="cartao__titulo">Titulo</h2>
+            <h3 class="cartao__subtitulo">Subtitulo</h3>
+            <p>Texto qualquer</p>
+        </article>
+
+        article.cartao-imagem>img[src="img/imagem.jpg" alt="Uma Imagem"]+.cartao-imagem__container>p{Um texto Qualquer}
+        <article class="cartao-imagem">
+            <img src="../aluramidi-curso-arquivos-iniciais/images/bateria.png" alt="Uma Imagem">
+            <div class="cartao-imagem__container">
+                <p>Um texto Qualquer</p>
+            </div>
+        </article>
+        
+        Ao referenciar no emmet apenas com ponto (.cartao-imagem), sera criada uma div.
+        article.cartao-imagem>.cartao-imagem__container>p{Um texto Qualquer}+img[src="img/imagem.jpg" alt="Uma Imagem"]
+        <article class="cartao-imagem">
+            <div class="cartao-imagem__container">
+                <p>Um texto Qualquer</p>
+                <img src="../aluramidi-curso-arquivos-iniciais/images/bateria.png" alt="Uma Imagem">
+            </div>
+        </article>
+
+        O parenteses ira delimitar o que fica dentro da div criada, por exemplo, a tag <img> que no exemplo anterior estava dentro da div, agora deve ficar fora.
+        article.cartao-imagem>(.cartao-imagem__container>p{Um texto Qualquer})+img[src="img/imagem.jpg" alt="Uma Imagem"]
+        <article class="cartao-imagem">
+            <div class="cartao-imagem__container">
+                <p>Um texto Qualquer</p>
+            </div>
+            <img src="../aluramidi-curso-arquivos-iniciais/images/bateria.png" alt="Uma Imagem">
+        </article>
+
+        *** OPERADORES NO EMMET
+
+        ul>li+li+li
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        ul>li*3
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        ul>li{Item}*3
+        <ul>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+
+        O Cifrao serve como contador para a multiplicação
+        ul>li{item $}*3
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+        
+        Pode ser utilizado para o data-item, gerando um indice
+        ul>li[data-item="$"]{Item $}*3
+        <ul>
+            <li data-item="1">Item 1</li>
+            <li data-item="2">Item 2</li>
+            <li data-item="3">Item 3</li>
+        </ul>
+    </main>
+</body>
+</html>

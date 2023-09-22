@@ -54,6 +54,43 @@
   gap: 15px;
 }
 
+/* videos */
+
+.videos__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.videos__item {
+  flex-grow: 1;
+  height: 303px;
+  width: 280px;
+}
+
+.descricao-video {
+  margin-top: 1rem;
+  display: grid;
+  text-align: start;
+  column-gap: 1rem;
+  row-gap: 10px;
+  grid-template-areas: 
+    "logo title"
+    "logo info";
+}
+
+.o-logo {
+  grid-area: logo;  
+}
+
+.o-title {
+  grid-area: title;
+}
+
+.o-info {
+  grid-area: info;
+}
+
 /* footer */
 
 .rodape__container {
